@@ -1,4 +1,3 @@
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9ca551a9ebcb4dcf95ae4c9beba2b3f7)](https://www.codacy.com/app/navicore/akka-http-phantom.g8?utm_source=github.com&utm_medium=referral&utm_content=navicore/akka-http-phantom.g8&utm_campaign=badger)
 [![Build Status](https://travis-ci.org/navicore/akka-http-phantom.g8.svg?branch=master)](https://travis-ci.org/navicore/akka-http-phantom.g8)
 
 A [g8] Template for an Akka HTTP API Server persisting objects with Phantom for Cassandra
