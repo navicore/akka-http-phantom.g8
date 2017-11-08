@@ -2,27 +2,24 @@ currentId = ce11d299-5aa4-4346-951b-3ed0cd78d09c
 
 --
 
-http://localhost:8080
-Content-Type: application/json; charset=utf-8
-GET /$httpBasePath;format="Camel,lower"$/$entityName;format="Camel,lower"$?name=one&limit=3
-
-http://localhost:8080
-Content-Type: application/json; charset=utf-8
-GET /$httpBasePath;format="Camel,lower"$/$entityName;format="Camel,lower"$/:currentId
-
-http://localhost:8080
-Content-Type: application/json; charset=utf-8
-GET /$httpBasePath;format="Camel,lower"$/$entityName;format="Camel,lower"$?name=one
-GET /$httpBasePath;format="Camel,lower"$/$entityName;format="Camel,lower"$?name=two
-GET /$httpBasePath;format="Camel,lower"$/$entityName;format="Camel,lower"$?name=three
-
+# STAR HERE and create your fist db entry
 http://localhost:8080
 Content-Type: application/json; charset=utf-8
 POST /$httpBasePath;format="Camel,lower"$/$entityName;format="Camel,lower"$
 {"name": "one", "value": 88.011}
 
+# Get the last thre
+http://localhost:8080
+Content-Type: application/json; charset=utf-8
+GET /$httpBasePath;format="Camel,lower"$/$entityName;format="Camel,lower"$?name=one&limit=3
+
+# Copy the id from the POST result to the currentId var at top of file and retrieve by ID
+http://localhost:8080
+Content-Type: application/json; charset=utf-8
+GET /$httpBasePath;format="Camel,lower"$/$entityName;format="Camel,lower"$/:currentId
+
+# Delete by ID
 http://localhost:8080
 Content-Type: application/json; charset=utf-8
 DELETE /$httpBasePath;format="Camel,lower"$/$entityName;format="Camel,lower"$/:currentId
-
 
