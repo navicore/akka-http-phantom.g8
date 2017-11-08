@@ -10,7 +10,7 @@ A [g8] Template for an Akka HTTP API Server persisting objects with [Phantom] fo
 
 ## USAGE
 
-G8 will prompt you for details like your project name and package name.
+G8 will prompt you for details like your project name and package name
 
 In a terminal shell, enter:
 
