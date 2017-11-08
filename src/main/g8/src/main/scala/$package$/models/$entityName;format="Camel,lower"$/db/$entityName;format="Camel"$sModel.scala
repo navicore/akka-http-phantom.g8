@@ -12,6 +12,7 @@ abstract class $entityName;format="Camel"$sModel extends Table[Concrete$entityNa
 
   override def tableName: String = "$entityName;format="Camel,lower"$s"
 
+  // String because TimedUUIDs are bad bad bad
   object id extends Col[String] with PartitionKey {
     override lazy val name = "$entityName;format="Camel,lower"$_id"
   }

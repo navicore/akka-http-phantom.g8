@@ -16,6 +16,7 @@ abstract class $entityName;format="Camel"$sByNameModel extends Table[$entityName
 
   object value extends Col[Double]
 
+  // String because Cassandra only supports evil TimedUUIDs
   object id extends Col[String] {
     override lazy val name = "$entityName;format="Camel,lower"$_id"
   }
