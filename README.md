@@ -32,16 +32,16 @@ notes:
   * basic time series lookups (last 'n' occurrences of 'name')
   * could be modified to be an append-only event-sourcing backend
 
-[Phantom]: https://github.com/outworkers/phantom
-[Cassandra]: http://cassandra.apache.org/
-[g8]: http://www.foundweekends.org/giter8/
-[g8 setup]: http://www.foundweekends.org/giter8/setup.html 
-
 ## DEVELOPING
 
-While developing the template, test using something like:
+While changing the template, test using something like:
 
 ```console
 sbt new file:///Users/navicore/git/navicore/akka-http-phantom.g8
 ```
+
+[Phantom]: https://github.com/outworkers/phantom
+[Cassandra]: http://cassandra.apache.org/
+[g8]: http://www.foundweekends.org/giter8/
+[g8 setup]: http://www.foundweekends.org/giter8/setup.html 
 
