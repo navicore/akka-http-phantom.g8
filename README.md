@@ -22,14 +22,6 @@ sbt new navicore/akka-http-phantom.g8
 
 See generated the README.md for how to build, configure, and connect to Cassandra
 
-## DEVELOPING
-
-While changing the template, test using something like:
-
-```console
-sbt new file:///Users/navicore/git/navicore/akka-http-phantom.g8
-```
-
 #### Notes About The Generated Example
 
 * The initial example entity is stored denormalized
@@ -43,4 +35,13 @@ sbt new file:///Users/navicore/git/navicore/akka-http-phantom.g8
 [Cassandra]: http://cassandra.apache.org/
 [g8]: http://www.foundweekends.org/giter8/
 [g8 setup]: http://www.foundweekends.org/giter8/setup.html 
+
+
+## DEVELOPING
+
+While changing the template, test using something like:
+
+```console
+sbt new file:///Users/navicore/git/navicore/akka-http-phantom.g8
+```
 
