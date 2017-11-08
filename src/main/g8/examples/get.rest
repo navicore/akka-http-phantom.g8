@@ -1,29 +1,28 @@
 currentId = ce11d299-5aa4-4346-951b-3ed0cd78d09c
 
-#Accept: text/xml; charset=utf-8
 --
 
 http://localhost:8080
 Content-Type: application/json; charset=utf-8
-GET /api/assessment?name=one&limit=3
+GET /$httpBasePath;format="Camel,lower"$/$entityName;format="Camel,lower"$?name=one&limit=3
 
 http://localhost:8080
 Content-Type: application/json; charset=utf-8
-GET /api/assessment/:currentId
+GET /$httpBasePath;format="Camel,lower"$/$entityName;format="Camel,lower"$/:currentId
 
 http://localhost:8080
 Content-Type: application/json; charset=utf-8
-GET /api/assessment?name=one
-GET /api/assessment?name=two
-GET /api/assessment?name=three
+GET /$httpBasePath;format="Camel,lower"$/$entityName;format="Camel,lower"$?name=one
+GET /$httpBasePath;format="Camel,lower"$/$entityName;format="Camel,lower"$?name=two
+GET /$httpBasePath;format="Camel,lower"$/$entityName;format="Camel,lower"$?name=three
 
 http://localhost:8080
 Content-Type: application/json; charset=utf-8
-POST /api/assessment
+POST /$httpBasePath;format="Camel,lower"$/$entityName;format="Camel,lower"$
 {"name": "one", "value": 88.011}
 
 http://localhost:8080
 Content-Type: application/json; charset=utf-8
-DELETE /api/assessment/:currentId
+DELETE /$httpBasePath;format="Camel,lower"$/$entityName;format="Camel,lower"$/:currentId
 
 
