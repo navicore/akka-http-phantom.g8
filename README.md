@@ -20,12 +20,15 @@ sbt new navicore/akka-http-phantom.g8
 
 `cd` into the resulting directory and test with `sbt run`
 
-notes:
+#### Notes:
 
-* The defaults assume an unsecured Cassandra at localhost:9042.  You can create a test Cassandra server via `docker run -p 9042:9042 --name my-cassandra -d cassandra:3.11`.
+* See `application.conf` for `ENVIRONMENT` variable overrides for Cassandra and Akka settings
+* The defaults assume an unsecured Cassandra at localhost:9042
+  * create a test Cassandra server that will work with the defaults via `docker run -p 9042:9042 --name my-cassandra -d cassandra:3.11`
+  * connect the `cqlsh` client via `docker run -it --link my-cassandra:cassandra --rm cassandra sh -c 'exec cqlsh "$CASSANDRA_PORT_9042_TCP_ADDR"'`
+  * to use a different server, override settings with ENV vars: see `application.conf`
 * `sbt assembly` works
 * `sbt assembly && docker build -t myimage .` builds a usable Docker image
-* see `application.conf` for `ENVIRONMENT` variable overrides for Cassandra and Akka settings
 * The initial example entity is stored denormalized
   * Primary key for one model is a v4 UUID
   * Primary key for a second model is `name` and clustering key is `datetime`
