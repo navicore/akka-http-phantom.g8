@@ -30,6 +30,15 @@ While changing the template, test using something like:
 sbt new file:///Users/navicore/git/navicore/akka-http-phantom.g8
 ```
 
+#### Notes About The Generated Example
+
+* The initial example entity is stored denormalized
+* primary key for one model is a v4 UUID
+* primary key for a second model is `name` and clustering key is `datetime`
+* CRUD works - see generated examples dir
+* basic time series lookups (last 'n' occurrences of 'name')
+* could be modified to be an append-only event-sourcing backend
+
 [Phantom]: https://github.com/outworkers/phantom
 [Cassandra]: http://cassandra.apache.org/
 [g8]: http://www.foundweekends.org/giter8/
