@@ -23,7 +23,14 @@ notes:
 
 * The defaults assume an unsecured Cassandra at localhost:9042.  You can create a test Cassandra server via `docker run -p 9042:9042 --name my-cassandra -d cassandra:3.11`.
 * `sbt assembly` works
-* `docker build -t myimage .` works
+* `sbt assembly && docker build -t myimage .` builds a usable Docker image
+* see `application.conf` for ENV overrides for Cassandra and Akka settings
+* The initial example entity is stored denormalized 
+  * Primary key for one model is a v4 UUID
+  * Primary key for a second model is a name and clustering key is datetime
+  * CRUD 
+  * basic time series lookups (last 'n' occurrences of 'name')
+  * could be modified to be an append-only event-sourcing backend
 
 [g8]: http://www.foundweekends.org/giter8/
 [g8 setup]: http://www.foundweekends.org/giter8/setup.html 

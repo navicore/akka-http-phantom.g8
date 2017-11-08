@@ -4,7 +4,7 @@ FROM java:8-alpine
 EXPOSE 8080
 
 RUN mkdir -p /app
-COPY target/scala-$scalaVersion$/*.jar /app/
+COPY target/scala-$scalaMajMin$/*.jar /app/
 
 WORKDIR /app
 
