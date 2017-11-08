@@ -29,7 +29,7 @@ notes:
 * The initial example entity is stored denormalized
   * Primary key for one model is a v4 UUID
   * Primary key for a second model is `name` and clustering key is `datetime`
-  * CRUD works - see examples dir
+  * CRUD works - see generated examples dir
   * basic time series lookups (last 'n' occurrences of 'name')
   * could be modified to be an append-only event-sourcing backend
 
