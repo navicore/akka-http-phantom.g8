@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/navicore/akka-http-phantom.g8.svg?branch=master)](https://travis-ci.org/navicore/akka-http-phantom.g8)
 
-A [g8] Template for an Akka HTTP API Server persisting objects with Phantom for Cassandra
+A [g8] Template for an Akka HTTP API Server persisting objects with [Phantom] for [Cassandra]
 ---
 
 ## PREREQ
@@ -32,6 +32,8 @@ notes:
   * basic time series lookups (last 'n' occurrences of 'name')
   * could be modified to be an append-only event-sourcing backend
 
+[Phantom]: https://github.com/outworkers/phantom
+[Cassandra]: http://cassandra.apache.org/
 [g8]: http://www.foundweekends.org/giter8/
 [g8 setup]: http://www.foundweekends.org/giter8/setup.html 
 
