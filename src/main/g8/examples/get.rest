@@ -1,0 +1,29 @@
+currentId = ce11d299-5aa4-4346-951b-3ed0cd78d09c
+
+#Accept: text/xml; charset=utf-8
+--
+
+http://localhost:3000
+Content-Type: application/json; charset=utf-8
+GET /api/assessment?name=one&limit=3
+
+http://localhost:3000
+Content-Type: application/json; charset=utf-8
+GET /api/assessment/:currentId
+
+http://localhost:3000
+Content-Type: application/json; charset=utf-8
+GET /api/assessment?name=one
+GET /api/assessment?name=two
+GET /api/assessment?name=three
+
+http://localhost:3000
+Content-Type: application/json; charset=utf-8
+POST /api/assessment
+{"name": "one", "value": 88.011}
+
+http://localhost:3000
+Content-Type: application/json; charset=utf-8
+DELETE /api/assessment/:currentId
+
+
