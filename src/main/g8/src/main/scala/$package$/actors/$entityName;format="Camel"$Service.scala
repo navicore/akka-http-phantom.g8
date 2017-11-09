@@ -6,8 +6,6 @@ import akka.actor._
 import akka.util.Timeout
 import com.typesafe.scalalogging.LazyLogging
 import $package$.actors.$entityName;format="Camel"$Service._
-
-import $package$.actors.$entityName;format="Camel"$Service._
 import $package$.models.$entityName;format="Camel,lower"$s._
 import $package$.models.$entityName;format="Camel,lower"$s.db._
 
