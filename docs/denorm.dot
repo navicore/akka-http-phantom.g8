@@ -1,5 +1,6 @@
 digraph structs {
- 
+
+  //rankdir=LR; 
   nodesep=2.5; ranksep=2.0;
   label="Default Example Entity 'Assessment' Denormalized in Generated Code"
  
@@ -15,17 +16,23 @@ digraph structs {
   subgraph cluster1 {
     label = "AssessmentModel";
     color=lightgrey;
-    model1 [shape=record,label="{<f0> PARTITION KEY | { id:UUID } }| <f1> name:String |<f2> value:Doubl e|<f3> datetime:Date"];
+    model1 [shape=record,label="{ PRIMARY KEY | {<f0> PARTITION KEY | { id:UUID } } } | <f1> name:String |<f2> value:Doubl e|<f3> datetime:Date"];
   }
 
   subgraph cluster2 {
     label = "AssessmentModelByName";
     color=lightgrey;
-    model2 [shape=record,label=" {<f1> PARTITION KEY | { name:String } } | { <f3> CLUSTERING KEY | { datetime:Date } } | <f0> id:UUID | <f2> value:Double "];
+    //model2 [shape=record,label=" {<f1> PARTITION KEY | { name:String } } | { <f3> CLUSTERING KEY | { datetime:Date } } | <f0> id:UUID | <f2> value:Double "];
+    model2 [shape=record,label="{ PRIMARY KEY | {<f1> PARTITION KEY | { name:String } } | { <f3> CLUSTERING KEY | { datetime:Date } } } | <f0> id:UUID | <f2> value:Double "];
   }
 
-  assessment:f0 -> model1:f0;
-  assessment:f1 -> model2:f1;
-  assessment:f3 -> model2:f3;
+  { rank = same; "assessment"; }
+  { rank = same; "model1"; }
+  { rank = same; "model2"; }
+  assessment -> model1;
+  assessment -> model2;
+  //assessment:f0 -> model1:f0;
+  //assessment:f1 -> model2:f1;
+  //assessment:f3 -> model2:f3;
 
 }

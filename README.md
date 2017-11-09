@@ -24,14 +24,14 @@ See generated the README.md for how to build, configure, and connect to Cassandr
 
 #### Notes About The Generated Example
 
-![Graphiz](docs/denorm.png)
-
 * The initial example entity is stored denormalized
 * primary key for one model is a v4 UUID
 * primary key for a second model is `name` and clustering key is `datetime`
 * CRUD works - see generated examples dir
 * basic time series lookups (last 'n' occurrences of 'name')
 * could be modified to be an append-only event-sourcing backend
+
+![Graphiz](docs/denorm.png)
 
 [Phantom]: https://github.com/outworkers/phantom
 [Cassandra]: http://cassandra.apache.org/
