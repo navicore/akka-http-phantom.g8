@@ -1,3 +1,8 @@
+<!-- ghmig:moved -->
+> **This repository has moved to [https://git.navicore.tech/navicore/akka-http-phantom.g8](https://git.navicore.tech/navicore/akka-http-phantom.g8).**
+>
+> The GitHub copy is archived and no longer maintained.
+
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/1bec982da37d4df0a375d183f2b97dd6)](https://www.codacy.com/app/navicore/akka-http-phantom.g8?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=navicore/akka-http-phantom.g8&amp;utm_campaign=Badge_Grade)
 [![Build Status](https://travis-ci.org/navicore/akka-http-phantom.g8.svg?branch=master)](https://travis-ci.org/navicore/akka-http-phantom.g8)
 
@@ -46,4 +51,3 @@ While changing the template, test using something like:
 ```console
 sbt new file:///Users/navicore/git/navicore/akka-http-phantom.g8
 ```
-
